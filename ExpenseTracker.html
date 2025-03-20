@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ExpenseTracker.css">
+    <title>Money Tracker Web App</title>
+</head>
+<body>
+    <h1> Money Tracker Web App</h1>
+    
+    <div class="input-section">
+        <label for="income-input">Income:</label>
+        <input type="number" id="income-input">
+        <button id="add-income-btn">Add Income</button>
+    </div>
+
+    <div class="input-section">
+        <label for="category-select">Category:</label>
+        <input type="text" id="category-select">
+        <label for="amount-input">Amount:</label>
+        <input type="number" id="amount-input">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        <button id="add-btn">Add Expense</button>
+    </div>
+
+    <div class="expenses-list">
+        <h2>Expenses List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body"></tbody>
+            <tfoot>
+                <tr>
+                    <td>Total Income:</td>
+                    <td id="total-income"></td>
+                    <td>Total Expenses:</td>
+                    <td id="total-amount"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Balance: <span id="balance-amount"></span></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <button id="show-bar-chart">Show Bar Chart</button>
+    <canvas id="expenseBarChart" width="400" height="400"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+    <script src="ExpenseTracker.js"></script>
+</body>
+</html>
